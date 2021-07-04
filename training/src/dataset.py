@@ -1,12 +1,14 @@
 import torch
 from transformers import BertTokenizer
 
+from training.settings import Settings
+
 
 class BERTDataset:
-    def __init__(self, texts, targets, max_len=128):
+    def __init__(self, texts, targets):
+        self.settings = Settings
         self.texts = texts
         self.targets = targets
-        self.max_len = max_len
         self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased',
                                                        do_lower_case=True)
 
@@ -14,8 +16,23 @@ class BERTDataset:
         return len(self.texts)
 
     def __getitem__(self, item):
-        pass
+        sent = str(self.texts[item])
+        inputs = self.tokenizer.encode_plus(
+            text=sent,
+            add_special_tokens=True,
+            max_length=self.settings.MAX_LEN,
+            padding="max_length",
+            return_attention_mask=True
+        )
 
-    def preprocessing_for_bert(self,data):
-        input_ids = []
-        attention_masks = []
+        ids = inputs["input_ids"]
+        mask = inputs["attention_mask"]
+        token_type_ids = inputs["token_type_ids"]
+
+        return {
+            'input_ids': torch.tensor(ids),
+            'attention_mask': torch.tensor(mask),
+            'token_type_ids': torch.tensor(token_type_ids),
+            'targets': torch.tensor(self.targets[item])
+        }
+
