@@ -1,15 +1,13 @@
-import time
-
 import pandas as pd
 import numpy as np
 import torch
 from sklearn.model_selection import train_test_split
 
-from training.src.model import BERTClassifier
-from training.src.dataset import BERTDataset
-from training.src.preprocess import Preprocess
-from training.src.engine import Engine
-from training.settings import Settings
+from src.model import BERTClassifier
+from src.dataset import BERTDataset
+from src.preprocess import Preprocess
+from src.engine import Engine
+from settings import Settings
 
 from transformers import AdamW, get_linear_schedule_with_warmup
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler

@@ -21,7 +21,7 @@ class BERTDataset:
             text=sent,
             add_special_tokens=True,
             max_length=self.settings.MAX_LEN,
-            padding="max_length",
+            pad_to_max_length=True,
             return_attention_mask=True
         )
 
@@ -35,4 +35,3 @@ class BERTDataset:
             'token_type_ids': torch.tensor(token_type_ids),
             'targets': torch.tensor(self.targets[item])
         }
-
