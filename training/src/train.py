@@ -61,9 +61,15 @@ class Train:
         # validation dataset
         val_dataset = BERTDataset(X_val, y_val)
 
-        self.train_data_loader = DataLoader(train_dataset, batch_size=self.settings.TRAIN_BATCH_SIZE, shuffle=True)
+        self.train_data_loader = DataLoader(train_dataset,
+                                            batch_size=self.settings.TRAIN_BATCH_SIZE,
+                                            shuffle=True,
+                                            num_workers=self.settings.TRAIN_NUM_WORKERS)
 
-        self.val_data_loader = DataLoader(val_dataset, batch_size=self.settings.VALID_BATCH_SIZE, shuffle=True)
+        self.val_data_loader = DataLoader(val_dataset,
+                                          batch_size=self.settings.VALID_BATCH_SIZE,
+                                          shuffle=True,
+                                          num_workers=self.settings.VAL_NUM_WORKERS)
 
         self.total_steps = int(len(X_train) / self.settings.TRAIN_BATCH_SIZE * self.settings.EPOCHS)
 

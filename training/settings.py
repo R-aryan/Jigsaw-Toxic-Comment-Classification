@@ -11,7 +11,9 @@ class Settings:
     VALID_BATCH_SIZE = 8
     EPOCHS = 2
     RANDOM_STATE = 42
-    MODEL_PATH = root_path+'model.bin'
+    MODEL_PATH = root_path + 'model.bin'
+    TRAIN_NUM_WORKERS = 4
+    VAL_NUM_WORKERS = 1
 
     # training data directory
     TRAIN_DATA = root_path + "\\training\\data\\train.csv"
@@ -24,4 +26,3 @@ class Settings:
 
     # mapping of columns
     columns = ['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate']
-
