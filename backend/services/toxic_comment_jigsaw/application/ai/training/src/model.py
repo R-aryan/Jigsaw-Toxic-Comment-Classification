@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 from transformers import BertModel
 
-from settings import Settings
+from backend.services.toxic_comment_jigsaw.application.ai.training.settings import Settings
 
 
 class BERTClassifier(nn.Module):

@@ -1,7 +1,7 @@
 import torch
 from transformers import BertTokenizer
 
-from training.settings import Settings
+from settings import Settings
 
 
 class BERTDataset:

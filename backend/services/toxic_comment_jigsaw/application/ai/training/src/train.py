@@ -1,13 +1,13 @@
 import pandas as pd
 import numpy as np
 import torch
-from sklearn.model_selection import train_test_split
 
-from src.model import BERTClassifier
-from src.dataset import BERTDataset
-from src.preprocess import Preprocess
-from src.engine import Engine
-from settings import Settings
+from sklearn.model_selection import train_test_split
+from backend.services.toxic_comment_jigsaw.application.ai.training.src.model import BERTClassifier
+from backend.services.toxic_comment_jigsaw.application.ai.training.src.dataset import BERTDataset
+from backend.services.toxic_comment_jigsaw.application.ai.training.src.preprocess import Preprocess
+from backend.services.toxic_comment_jigsaw.application.ai.training.src.engine import Engine
+from backend.services.toxic_comment_jigsaw.application.ai.training.settings import Settings
 
 from transformers import AdamW, get_linear_schedule_with_warmup
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler

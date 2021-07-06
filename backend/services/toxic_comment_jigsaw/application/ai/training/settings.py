@@ -5,7 +5,7 @@ import torch
 
 class Settings:
     PROJ_NAME = 'Jigsaw-Toxic-Comment-Classification'
-    root_path = os.getcwd().split(PROJ_NAME)[0] + "\\" + PROJ_NAME + "\\"
+    root_path = os.getcwd().split(PROJ_NAME)[0] + PROJ_NAME + "\\"
     MAX_LEN = 512
     TRAIN_BATCH_SIZE = 16
     VALID_BATCH_SIZE = 16
@@ -15,8 +15,10 @@ class Settings:
     TRAIN_NUM_WORKERS = 4
     VAL_NUM_WORKERS = 1
 
+    APPLICATION_PATH = root_path + "backend\\services\\toxic_comment_jigsaw\\application\\"
+
     # training data directory
-    TRAIN_DATA = root_path + "\\training\\data\\train.csv"
+    TRAIN_DATA = APPLICATION_PATH + "ai\\training\\data\\train.csv"
 
     DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     input_dim = 768
