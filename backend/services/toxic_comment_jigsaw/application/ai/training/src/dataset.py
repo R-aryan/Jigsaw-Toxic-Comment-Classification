@@ -1,7 +1,7 @@
 import torch
 from transformers import BertTokenizer
 
-from settings import Settings
+from backend.services.toxic_comment_jigsaw.application.ai.settings import Settings
 
 
 class BERTDataset:

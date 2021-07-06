@@ -20,6 +20,9 @@ class Settings:
     # training data directory
     TRAIN_DATA = APPLICATION_PATH + "ai\\training\\data\\train.csv"
 
+    # weights path
+    WEIGHTS_PATH = APPLICATION_PATH + "ai\\weights\\bert_base_uncased\\toxic_model.bin"
+
     DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     input_dim = 768
     hidden_dim = 50
