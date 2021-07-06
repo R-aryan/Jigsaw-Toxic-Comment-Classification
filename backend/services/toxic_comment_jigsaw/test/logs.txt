@@ -1,0 +1,11 @@
+[07-Jul-2021 : 01:18:48] INFO [root.info:29] INFO : Loading Bert Base Uncased Model
+[07-Jul-2021 : 01:18:52] INFO [root.info:29] INFO : Bert Base Model Successfully Loaded
+[07-Jul-2021 : 01:18:52] INFO [root.info:29] INFO : Loading Model trained Weights
+[07-Jul-2021 : 01:18:53] INFO [root.info:29] INFO : Model Weights loaded Successfully
+[07-Jul-2021 : 01:18:54] INFO [root.info:29] INFO : Data for inference received---!!
+[07-Jul-2021 : 01:18:54] INFO [root.info:29] INFO : Running Inference----!!
+[07-Jul-2021 : 01:18:54] INFO [root.info:29] INFO : Performing prediction on the given data
+[07-Jul-2021 : 01:18:54] INFO [root.info:29] INFO : Performing text preprocessing and Encoding for BERT
+[07-Jul-2021 : 01:18:54] INFO [root.info:29] INFO : Text preprocessing and Encoding done successfully
+[07-Jul-2021 : 01:18:57] INFO [root.info:29] INFO : Prediction Successful and output returned from predict function
+[07-Jul-2021 : 01:18:57] INFO [root.info:29] INFO : Prediction Successful and output returned 

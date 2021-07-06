@@ -1,22 +1,42 @@
+import logging
+import sys
+
 from backend.common.logging.logger import Logger
 
 
 class ConsoleLogger(Logger):
-    def __init__(self):
-
+    def __init__(self, filename='logs.txt', logging_level=logging.INFO):
         super(ConsoleLogger, self).__init__()
+        if logging_level not in [logging.DEBUG, logging.INFO, logging.WARNING, logging.ERROR, logging.FATAL]:
+            raise Exception('Unable to instantiate logger with given exception level')
+
+        self.filename = filename
+        logging.basicConfig(filename=self.filename,
+                            format="[%(asctime)s] %(levelname)s [%(name)s.%(funcName)s:%(lineno)d] %(message)s",
+                            datefmt="%d-%b-%Y : %H:%M:%S"
+                            )
+
+        self.logger = logging.getLogger()
+        self.logger.setLevel(logging_level)
+        # self.logger.addHandler()
+        self.context = ""
 
     def debug(self, message, file_id='', context=''):
-        print('DEBUG: '+message)
+        self.logger.debug(msg='DEBUG : '+message)
+        # print('DEBUG: ' + message)
 
     def info(self, message, file_id='', context=''):
-        print('INFO: '+message)
+        self.logger.info(msg='INFO : ' + message)
+        print('INFO: ' + message)
 
     def warning(self, message, file_id='', context=''):
-        print('WARNING: '+message)
+        self.logger.warning(msg='WARNING : ' + message)
+        print('WARNING: ' + message)
 
     def error(self, message, file_id='', context=''):
-        print('ERROR: '+message)
+        self.logger.error(msg='ERROR : ' + message)
+        print('ERROR: ' + message)
 
     def fatal(self, message, file_id='', context=''):
-        print('FATAL: '+message)
+        self.logger.fatal(msg='FATAL : ' + message)
+        print('FATAL: ' + message)
