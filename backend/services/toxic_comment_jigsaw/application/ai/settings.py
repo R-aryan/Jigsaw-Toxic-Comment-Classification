@@ -20,6 +20,9 @@ class Settings:
     # training data directory
     TRAIN_DATA = APPLICATION_PATH + "ai\\training\\data\\train.csv"
 
+    # test data directory
+    TEST_DATA = APPLICATION_PATH + "ai\\training\\data\\test.csv"
+
     # weights path
     WEIGHTS_PATH = APPLICATION_PATH + "ai\\weights\\bert_base_uncased\\toxic_model.bin"
 
@@ -30,4 +33,4 @@ class Settings:
     bert_model_name = 'bert-base-uncased'
 
     # mapping of columns
-    columns = ['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate']
+    column_label = ['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate']
