@@ -26,6 +26,9 @@ class Settings:
     # weights path
     WEIGHTS_PATH = APPLICATION_PATH + "ai\\weights\\bert_base_uncased\\toxic_model.bin"
 
+    # setting up logs path
+    LOGS_DIRECTORY = root_path + "backend\\services\\toxic_comment_jigsaw\\logs\\logs.txt"
+
     DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     input_dim = 768
     hidden_dim = 50

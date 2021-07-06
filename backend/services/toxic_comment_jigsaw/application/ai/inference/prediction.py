@@ -26,18 +26,18 @@ class Prediction:
     def load_model_weights(self):
         try:
             # print("-------Loading Bert Base Model------")
-            self.logger.info(message="Loading Bert Base Uncased Model")
+            self.logger.info(message="Loading Bert Base Uncased Model.")
             self.__model = BERTClassifier()
             # print("-------Bert Base Model Successfully Loaded---- \n\n")
-            self.logger.info(message="Bert Base Model Successfully Loaded")
+            self.logger.info(message="Bert Base Model Successfully Loaded.")
 
             # print('Loading Model Weights----!!')
-            self.logger.info(message="Loading Model trained Weights")
+            self.logger.info(message="Loading Model trained Weights.")
             self.__model.load_state_dict(torch.load(self.settings.WEIGHTS_PATH,
                                                     map_location=torch.device(self.settings.DEVICE)))
             self.__model.to(self.settings.DEVICE)
             self.__model.eval()
-            self.logger.info(message="Model Weights loaded Successfully")
+            self.logger.info(message="Model Weights loaded Successfully--!!")
 
         except BaseException as ex:
             # print("Following Exception Occurred---!! ", str(ex))
@@ -45,7 +45,7 @@ class Prediction:
 
     def preprocessing_for_bert(self, data):
         try:
-            self.logger.info(message="Performing text preprocessing and Encoding for BERT")
+            self.logger.info(message="Performing text preprocessing and Encoding for BERT.")
             data = self.preprocess.clean_text(data)
             encoded_text = self.tokenizer.encode_plus(
                 text=data,
@@ -64,7 +64,7 @@ class Prediction:
 
             input_ids = input_ids.to(self.settings.DEVICE)
             attention_mask = attention_mask.to(self.settings.DEVICE)
-            self.logger.info(message="Text preprocessing and Encoding done successfully")
+            self.logger.info(message="Text preprocessing and Encoding done successfully.")
 
         except BaseException as ex:
             print("Following Exception Occurred---!! ", str(ex))
@@ -75,7 +75,7 @@ class Prediction:
     def __predict(self, data):
         output = None
         try:
-            self.logger.info(message="Performing prediction on the given data")
+            self.logger.info(message="Performing prediction on the given data.")
             input_ids, attention_mask = tuple(self.preprocessing_for_bert(data))
             with torch.no_grad():
                 logits = self.__model(input_ids=input_ids,
@@ -83,7 +83,7 @@ class Prediction:
                                       attention_mask=attention_mask)
 
             output = logits.sigmoid().cpu().detach().numpy()
-            self.logger.info(message="Prediction Successful and output returned from predict function")
+            self.logger.info(message="Prediction Successful and output returned from predict function.")
 
         except BaseException as ex:
             print("Following Exception Occurred---!! ", str(ex))
@@ -98,9 +98,18 @@ class Prediction:
         result = self.__predict(data)
 
         output = pd.DataFrame(result, columns=self.settings.column_label)
-        self.logger.info(message="Prediction Successful and output returned ")
+        self.logger.info(message="Performing mapping and returning response.")
+        # print(output)
 
-        return {
-            "data":data,
-            "prediction":output
+        return self.__map_response(output)
+
+    def __map_response(self, output):
+        result = {
+            self.settings.column_label[0]: round(output[self.settings.column_label[0]].values[0], 6),
+            self.settings.column_label[1]: round(output[self.settings.column_label[1]].values[0], 6),
+            self.settings.column_label[2]: round(output[self.settings.column_label[2]].values[0], 6),
+            self.settings.column_label[3]: round(output[self.settings.column_label[3]].values[0], 6),
+            self.settings.column_label[4]: round(output[self.settings.column_label[4]].values[0], 6),
+            self.settings.column_label[5]: round(output[self.settings.column_label[5]].values[0], 6),
         }
+        return result

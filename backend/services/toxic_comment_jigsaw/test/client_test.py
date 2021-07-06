@@ -4,10 +4,10 @@ from toxic_comment_jigsaw.application.ai.training.src.preprocess import Preproce
 from toxic_comment_jigsaw.application.ai.settings import Settings
 import pandas as pd
 
-p1 = Prediction(preprocess=Preprocess(), logger=ConsoleLogger())
+p1 = Prediction(preprocess=Preprocess(), logger=ConsoleLogger(filename=Settings.LOGS_DIRECTORY))
 data = pd.read_csv(Settings.TEST_DATA)
 data = data.comment_text.values
-index = 1500
+index = 75
 
 print("Sample Input, ", str(data[index]))
 output = p1.run_inference(data[index])
