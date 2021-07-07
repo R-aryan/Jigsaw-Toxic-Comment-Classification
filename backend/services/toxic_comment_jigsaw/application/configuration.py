@@ -11,4 +11,4 @@ class Configuration(Module):
     def configure(self, binder):
         logger = ConsoleLogger(filename=Settings.LOGS_DIRECTORY)
         binder.bind(Logger, to=logger, scope=singleton)
-        binder.bind(Prediction, to=Prediction(preprocess=Preprocess()))
+        binder.bind(Prediction, to=Prediction(preprocess=Preprocess(), logger=logger), scope=singleton)

@@ -13,7 +13,7 @@ class ParamsController(Controller):
     def post(self):
         try:
             req_json = request.get_json()
-            response = self.prediction.run_prediction(req_json['data'])
+            response = self.predict.run_inference(req_json['data'])
             result = {'response': response}
             self.predict.logger.info('Request processed successfully--!!')
             return self.response_ok(result)

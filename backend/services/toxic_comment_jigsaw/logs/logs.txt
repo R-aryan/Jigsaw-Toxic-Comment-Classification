@@ -9,3 +9,26 @@
 [07-Jul-2021 : 01:43:21] INFO [root.info:29] INFO : Text preprocessing and Encoding done successfully
 [07-Jul-2021 : 01:43:23] INFO [root.info:29] INFO : Prediction Successful and output returned from predict function
 [07-Jul-2021 : 01:43:23] INFO [root.info:29] INFO : Performing mapping and returning response 
+[07-Jul-2021 : 21:02:00] INFO [root.info:29] INFO : Loading Bert Base Uncased Model.
+[07-Jul-2021 : 21:02:06] INFO [root.info:29] INFO : Bert Base Model Successfully Loaded.
+[07-Jul-2021 : 21:02:06] INFO [root.info:29] INFO : Loading Model trained Weights.
+[07-Jul-2021 : 21:02:09] INFO [root.info:29] INFO : Model Weights loaded Successfully--!!
+[07-Jul-2021 : 21:02:09] INFO [werkzeug._log:113]  * Running on http://localhost:8080/ (Press CTRL+C to quit)
+[07-Jul-2021 : 21:02:22] INFO [root.info:29] INFO : POST request received:http://localhost:8080/toxic_comment/api/v1/predict
+[07-Jul-2021 : 21:02:41] ERROR [root.error:37] ERROR : Error Occurred-- 'ParamsController' object has no attribute 'prediction'
+[07-Jul-2021 : 21:02:41] INFO [werkzeug._log:113] 127.0.0.1 - - [07/Jul/2021 21:02:41] "[35m[1mPOST //toxic_comment/api/v1/predict HTTP/1.1[0m" 500 -
+[07-Jul-2021 : 21:03:54] INFO [root.info:29] INFO : Loading Bert Base Uncased Model.
+[07-Jul-2021 : 21:03:59] INFO [root.info:29] INFO : Bert Base Model Successfully Loaded.
+[07-Jul-2021 : 21:03:59] INFO [root.info:29] INFO : Loading Model trained Weights.
+[07-Jul-2021 : 21:04:01] INFO [root.info:29] INFO : Model Weights loaded Successfully--!!
+[07-Jul-2021 : 21:04:01] INFO [werkzeug._log:113]  * Running on http://localhost:8080/ (Press CTRL+C to quit)
+[07-Jul-2021 : 21:04:11] INFO [root.info:29] INFO : POST request received:http://localhost:8080/toxic_comment/api/v1/predict
+[07-Jul-2021 : 21:04:28] INFO [root.info:29] INFO : Data for inference received---!!
+[07-Jul-2021 : 21:04:29] INFO [root.info:29] INFO : Running Inference----!!
+[07-Jul-2021 : 21:04:37] INFO [root.info:29] INFO : Performing prediction on the given data.
+[07-Jul-2021 : 21:04:40] INFO [root.info:29] INFO : Performing text preprocessing and Encoding for BERT.
+[07-Jul-2021 : 21:04:40] INFO [root.info:29] INFO : Text preprocessing and Encoding done successfully.
+[07-Jul-2021 : 21:04:53] INFO [root.info:29] INFO : Prediction Successful and output returned from predict function.
+[07-Jul-2021 : 21:05:03] INFO [root.info:29] INFO : Performing mapping and returning response.
+[07-Jul-2021 : 21:05:09] INFO [root.info:29] INFO : Request processed successfully--!!
+[07-Jul-2021 : 21:05:10] INFO [werkzeug._log:113] 127.0.0.1 - - [07/Jul/2021 21:05:10] "[37mPOST //toxic_comment/api/v1/predict HTTP/1.1[0m" 200 -

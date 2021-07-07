@@ -7,7 +7,7 @@ import pandas as pd
 p1 = Prediction(preprocess=Preprocess(), logger=ConsoleLogger(filename=Settings.LOGS_DIRECTORY))
 data = pd.read_csv(Settings.TEST_DATA)
 data = data.comment_text.values
-index = 75
+index = 555
 
 print("Sample Input, ", str(data[index]))
 output = p1.run_inference(data[index])
