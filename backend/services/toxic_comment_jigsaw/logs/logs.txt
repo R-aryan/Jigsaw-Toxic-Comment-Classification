@@ -32,3 +32,10 @@
 [07-Jul-2021 : 21:05:03] INFO [root.info:29] INFO : Performing mapping and returning response.
 [07-Jul-2021 : 21:05:09] INFO [root.info:29] INFO : Request processed successfully--!!
 [07-Jul-2021 : 21:05:10] INFO [werkzeug._log:113] 127.0.0.1 - - [07/Jul/2021 21:05:10] "[37mPOST //toxic_comment/api/v1/predict HTTP/1.1[0m" 200 -
+[07-Jul-2021 : 21:12:14] INFO [root.info:29] INFO : Loading Bert Base Uncased Model.
+[07-Jul-2021 : 21:12:19] INFO [root.info:29] INFO : Bert Base Model Successfully Loaded.
+[07-Jul-2021 : 21:12:19] INFO [root.info:29] INFO : Loading Model trained Weights.
+[07-Jul-2021 : 21:12:21] INFO [root.info:29] INFO : Model Weights loaded Successfully--!!
+[07-Jul-2021 : 21:12:21] INFO [werkzeug._log:113]  * Running on http://localhost:8080/ (Press CTRL+C to quit)
+[07-Jul-2021 : 21:12:28] INFO [root.info:29] INFO : GET request received:http://localhost:8080/toxic_comment/api/v1/predict
+[07-Jul-2021 : 21:12:28] INFO [werkzeug._log:113] 127.0.0.1 - - [07/Jul/2021 21:12:28] "[37mGET /toxic_comment/api/v1/predict HTTP/1.1[0m" 200 -
