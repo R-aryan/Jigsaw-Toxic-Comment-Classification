@@ -21,9 +21,9 @@ class Prediction:
         self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased',
                                                        do_lower_case=True)
 
-        self.load_model_weights()
+        self.__load_model()
 
-    def load_model_weights(self):
+    def __load_model(self):
         try:
             # print("-------Loading Bert Base Model------")
             self.logger.info(message="Loading Bert Base Uncased Model.")
