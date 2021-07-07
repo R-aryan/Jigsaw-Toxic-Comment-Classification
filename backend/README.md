@@ -3,6 +3,7 @@
 
 - End to End NLP Multi label Classification problem
 - The Kaggle dataset can be found Here [Click Here](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data)
+- My kaggle Notebook can be found [here](https://www.kaggle.com/raryan/jigsaw-toxic-comment-bert-base-uncased)
  
 ## Steps to Run the Project:
 - create a virtual environment and install requirements.txt
@@ -12,6 +13,7 @@
 - After training is complete the weights of the model will be saved in weights directory, and this weights can be used for inference.
   
 ### For Prediction/Inference
+- Download the pre-trained weights from [here](https://drive.google.com/file/d/1yx6C1_Ucuodb4z0QzylCv4CqqbEv_tt3/view?usp=sharing) and place it inside the weights folder(**backend/services/toxic_comment_jigsaw/application/ai/weights/bert_based_uncased**)
 - After setting up the environment: go to **backend/services/toxic_comment_jigsaw/api** and run **app.py**.
 - After running the above step the server will start.  
 - You can send the POST request at this URL - **localhost:8080/toxic_comment/api/v1/predict** (you can find the declaration of endpoint under **backend/services/toxic_comment_jigsaw/api/__init__.py** )
