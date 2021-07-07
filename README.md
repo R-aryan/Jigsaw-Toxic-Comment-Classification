@@ -16,3 +16,5 @@ We are provided with a large number of Wikipedia comments which have been labele
 - identity_hate
 
 The Goal is to  create a model which predicts a probability of each type of toxicity for each comment.
+
+####  Steps to run the project [Click Here](https://github.com/R-aryan/Jigsaw-Toxic-Comment-Classification/blob/develop/backend/README.md)

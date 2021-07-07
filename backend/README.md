@@ -3,10 +3,6 @@
 
 - End to End NLP Multi label Classification problem
 - The Kaggle dataset can be found Here [Click Here](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data)
-
-# Tweet Sentiment Analysis
-
-The Kaggle dataset can be found here - [Dataset](https://www.kaggle.com/c/tweet-sentiment-extraction/data)
  
 ## Steps to Run the Project:
 - create a virtual environment and install requirements.txt
