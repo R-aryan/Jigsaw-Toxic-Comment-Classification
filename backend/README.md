@@ -4,15 +4,27 @@
 - End to End NLP Multi label Classification problem
 - The Kaggle dataset can be found Here [Click Here](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data)
 
-### Dataset Description
+# Tweet Sentiment Analysis
 
-We are provided with a large number of Wikipedia comments which have been labeled by human raters for toxic behavior. The types of toxicity are:
+The Kaggle dataset can be found here - [Dataset](https://www.kaggle.com/c/tweet-sentiment-extraction/data)
+ 
+## Steps to Run the Project:
+- create a virtual environment and install requirements.txt
+  
+### For Training
+- After Setting up the environment go to **backend/services/toxic_comment_jigsaw/application/ai/training/** and run **main.py** and the training will start.
+- After training is complete the weights of the model will be saved in weights directory, and this weights can be used for inference.
+  
+### For Prediction/Inference
+- After setting up the environment: go to **backend/services/toxic_comment_jigsaw/api** and run **app.py**.
+- After running the above step the server will start.  
+- You can send the POST request at this URL - **localhost:8080/toxic_comment/api/v1/predict** (you can find the declaration of endpoint under **backend/services/toxic_comment_jigsaw/api/__init__.py** )
 
-- toxic
-- severe_toxic
-- obscene
-- threat
-- insult
-- identity_hate
+Following are the screenshots for the output, and the request.
 
-The Goal is to  create a model which predicts a probability of each type of toxicity for each comment.
+- Request sample 
+![Sample request](https://github.com/R-aryan/Tweet_Sentiment_Analysis/blob/develop/msc/request_sample.png)
+  <br>
+  <br>
+- Response Sample
+![Sample response](https://github.com/R-aryan/Tweet_Sentiment_Analysis/blob/develop/msc/response_sample.png)
