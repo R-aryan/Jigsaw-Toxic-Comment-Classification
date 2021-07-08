@@ -108,7 +108,7 @@ traitlets==4.3.3
 transformers==4.5.1
 typing==3.7.4.3
 typing-extensions
-urllib3==1.26.3
+urllib3==1.26.5
 watchtower==1.0.6
 wcwidth==0.2.5
 webencodings==0.5.1
