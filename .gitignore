@@ -114,3 +114,5 @@ dmypy.json
 .pyre/
 
 .idea/*
+
+backend/services/toxic_comment_jigsaw/application/ai/weights/bert_base_uncased/*
