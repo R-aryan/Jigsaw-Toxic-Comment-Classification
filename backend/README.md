@@ -24,5 +24,7 @@ Following are the screenshots for the output, and the request.
 ![Sample request](https://github.com/R-aryan/Jigsaw-Toxic-Comment-Classification/blob/develop/msc/toxic_request.png)
   <br>
   <br>
+  
 - Response Sample
+
 ![Sample response](https://github.com/R-aryan/Jigsaw-Toxic-Comment-Classification/blob/develop/msc/toxic_response.png)
