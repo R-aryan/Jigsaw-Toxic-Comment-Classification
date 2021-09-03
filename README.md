@@ -20,3 +20,15 @@ We are provided with a large number of Wikipedia comments which have been labele
 The Goal is to  create a model which predicts a probability of each type of toxicity for each comment.
 
 
+### Following are the screenshots for the output, and the request.
+
+- Request sample 
+![Sample request](https://github.com/R-aryan/Jigsaw-Toxic-Comment-Classification/blob/develop/msc/toxic_request.png)
+  <br>
+  <br>
+  
+- Response Sample
+
+![Sample response](https://github.com/R-aryan/Jigsaw-Toxic-Comment-Classification/blob/develop/msc/toxic_response.png)
+
+
