@@ -14,7 +14,7 @@
   
 ### For Prediction/Inference
 - Download the pre-trained weights from [here](https://drive.google.com/file/d/1yx6C1_Ucuodb4z0QzylCv4CqqbEv_tt3/view?usp=sharing) and place it inside the weights folder(**backend/services/toxic_comment_jigsaw/application/ai/weights/bert_based_uncased**)
-- After setting up the environment: go to **backend/services/toxic_comment_jigsaw/api** and run **app.py**.
+- After setting up the environment: go to [**backend/services/toxic_comment_jigsaw/api**](https://github.com/R-aryan/Jigsaw-Toxic-Comment-Classification/tree/main/backend/services/toxic_comment_jigsaw/api) and run **app.py**.
 - After running the above step the server will start.  
 - You can send the POST request at this URL - **localhost:8080/toxic_comment/api/v1/predict** (you can find the declaration of endpoint under [**backend/services/toxic_comment_jigsaw/api/__init__.py**](https://github.com/R-aryan/Jigsaw-Toxic-Comment-Classification/blob/main/backend/services/toxic_comment_jigsaw/api/__init__.py) )
 
