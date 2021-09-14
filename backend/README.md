@@ -9,7 +9,7 @@
 - create a virtual environment and install requirements.txt
   
 ### For Training
-- After Setting up the environment go to **backend/services/toxic_comment_jigsaw/application/ai/training/** and run **main.py** and the training will start.
+- After Setting up the environment go to [**backend/services/toxic_comment_jigsaw/application/ai/training/**](https://github.com/R-aryan/Jigsaw-Toxic-Comment-Classification/tree/main/backend/services/toxic_comment_jigsaw/application/ai/training) and run **main.py** and the training will start.
 - After training is complete the weights of the model will be saved in weights directory, and this weights can be used for inference.
   
 ### For Prediction/Inference
