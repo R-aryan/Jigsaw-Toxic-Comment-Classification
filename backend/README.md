@@ -18,7 +18,7 @@
 - After running the above step the server will start.  
 - You can send the POST request at this URL - **localhost:8080/toxic_comment/api/v1/predict** (you can find the declaration of endpoint under [**backend/services/toxic_comment_jigsaw/api/__init__.py**](https://github.com/R-aryan/Jigsaw-Toxic-Comment-Classification/blob/main/backend/services/toxic_comment_jigsaw/api/__init__.py) )
 
-Following are the screenshots for the output, and the request.
+### Following are the screenshots for the output, and the request.
 
 - Request sample 
 ![Sample request](https://github.com/R-aryan/Jigsaw-Toxic-Comment-Classification/blob/main/msc/toxic_request.png)
