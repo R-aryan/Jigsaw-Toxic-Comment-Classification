@@ -6,7 +6,10 @@
 - My kaggle Notebook can be found [here](https://www.kaggle.com/raryan/jigsaw-toxic-comment-bert-base-uncased)
  
 ## Steps to Run the Project:
-- create a virtual environment and install requirements.txt
+- What is [**Virtual Environment in python ?**](https://www.geeksforgeeks.org/python-virtual-environment/)
+- [Create virtual environment in python](https://www.geeksforgeeks.org/creating-python-virtual-environment-windows-linux/)
+- [Create virtual environment Anaconda](https://www.geeksforgeeks.org/set-up-virtual-environment-for-python-using-anaconda/)
+- create a virtual environment and install [requirements.txt](https://github.com/R-aryan/Text-Summarization-Using-T5/blob/develop/requirements.txt)
   
 ### For Training
 - After Setting up the environment go to [**backend/services/toxic_comment_jigsaw/application/ai/training/**](https://github.com/R-aryan/Jigsaw-Toxic-Comment-Classification/tree/main/backend/services/toxic_comment_jigsaw/application/ai/training) and run **main.py** and the training will start.
